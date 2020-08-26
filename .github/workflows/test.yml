@@ -1,0 +1,15 @@
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.7.1'
+      - run: gem install bundler
+      - run: bundle install
+      - run: bundle exec rubocop
+      - run: bundle exec steep check
+      - run: bundle exec rspec

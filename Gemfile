@@ -1,7 +1,9 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in noray.gemspec
-gemspec
+source 'https://rubygems.org'
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+gem 'rake', '~> 12.0'
+gem 'rspec', '~> 3.0'
+gem 'rubocop', require: false
+gem 'simplecov', require: false, group: :test
+gem 'steep'

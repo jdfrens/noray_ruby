@@ -1,6 +1,7 @@
-require "noray/version"
+# frozen_string_literal: true
 
+require 'noray/version'
+
+# Top-level module!
 module Noray
-  class Error < StandardError; end
-  # Your code goes here...
 end
