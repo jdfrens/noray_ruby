@@ -6,8 +6,12 @@ RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
 
-task all_tests: %i[rubocop spec]
+task all_tests: %i[rubocop steep spec]
 
 task :rubocop do
   sh 'rubocop'
+end
+
+task :steep do
+  sh 'steep check'
 end
