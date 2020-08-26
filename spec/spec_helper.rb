@@ -1,6 +1,12 @@
 require 'bundler/setup'
 require 'noray'
 
+require 'simplecov'
+SimpleCov.start do
+  enable_coverage :branch
+  minimum_coverage line: 90, branch: 80
+end
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
