@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Noray do
   it 'has a version number' do
     expect(Noray::VERSION).not_to be nil

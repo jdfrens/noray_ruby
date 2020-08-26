@@ -10,4 +10,5 @@ jobs:
           ruby-version: '2.7.1'
       - run: gem install bundler
       - run: bundle install
+      - run: bundle exec rubocop
       - run: bundle exec rspec
