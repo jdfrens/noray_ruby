@@ -5,6 +5,8 @@ module Noray
     @z: Float
     @w: Float
 
+    def self.point: (Float, Float, Float) -> Tetrad
+
     def initialize: (Float, Float, Float, Float) -> untyped
     def x: -> Float
     def y: -> Float

@@ -10,4 +10,11 @@ RSpec.describe Noray::Tetrad do
       expect(tetrad.w).to be(4.0)
     end
   end
+
+  describe '.point' do
+    it 'initializes as a point' do
+      point = described_class.point(1.0, 2.0, 3.0)
+      expect(point).to eq(described_class.new(1.0, 2.0, 3.0, 1.0))
+    end
+  end
 end
