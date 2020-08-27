@@ -1,0 +1,14 @@
+module Noray
+  class Tetrad
+    @x: Float
+    @y: Float
+    @z: Float
+    @w: Float
+
+    def initialize: (Float, Float, Float, Float) -> untyped
+    def x: -> Float
+    def y: -> Float
+    def z: -> Float
+    def w: -> Float
+  end
+end
