@@ -10,6 +10,10 @@ module Noray
       new(x, y, z, 1.0)
     end
 
+    def self.vector(x, y, z) # rubocop:disable Naming/MethodParameterName:
+      new(x, y, z, 0.0)
+    end
+
     def initialize(x, y, z, w) # rubocop:disable Naming/MethodParameterName:
       @x = x
       @y = y

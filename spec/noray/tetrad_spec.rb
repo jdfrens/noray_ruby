@@ -17,4 +17,11 @@ RSpec.describe Noray::Tetrad do
       expect(point).to eq(described_class.new(1.0, 2.0, 3.0, 1.0))
     end
   end
+
+  describe '.vector' do
+    it 'initializes as a vector' do
+      vector = described_class.vector(1.0, 2.0, 3.0)
+      expect(vector).to eq(described_class.new(1.0, 2.0, 3.0, 0.0))
+    end
+  end
 end
