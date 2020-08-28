@@ -22,5 +22,6 @@ module Noray
     def scale_inverse: (Float) -> Tetrad
 
     def magnitude: -> Float
+    def normalize: -> Tetrad
   end
 end

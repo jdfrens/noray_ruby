@@ -56,5 +56,9 @@ module Noray
     def magnitude
       Math.sqrt(x * x + y * y + z * z + w * w) # rubocop:disable Lint/BinaryOperatorWithIdenticalOperands
     end
+
+    def normalize
+      scale_inverse(magnitude)
+    end
   end
 end

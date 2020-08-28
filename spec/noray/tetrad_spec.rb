@@ -83,4 +83,18 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
       expect(vector.magnitude).to eq(Math.sqrt(14.0))
     end
   end
+
+  describe 'normalize' do
+    it 'normalizes a simple vector' do
+      vector = described_class.vector(4.0, 0.0, 0.0)
+      expect(vector.normalize).to eq(described_class.vector(1.0, 0.0, 0.0))
+    end
+
+    it 'normalizes an interesting vector' do
+      vector = described_class.vector(1.0, -2.0, 3.0)
+      expected_vector =
+        described_class.vector(1.0, -2.0, 3.0).scale_inverse(Math.sqrt(14))
+      expect(vector.normalize).to eq(expected_vector)
+    end
+  end
 end
