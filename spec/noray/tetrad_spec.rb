@@ -2,13 +2,9 @@
 
 RSpec.describe Noray::Tetrad do
   describe '#initialize' do
-    it 'initializes the components' do
-      tetrad = Noray::Tetrad.new(1.0, 2.0, 3.0, 4.0)
-      expect(tetrad.x).to be(1.0)
-      expect(tetrad.y).to be(2.0)
-      expect(tetrad.z).to be(3.0)
-      expect(tetrad.w).to be(4.0)
-    end
+    subject { described_class.new(1.0, 2.0, 3.0, 4.0) }
+
+    it { is_expected.to have_attributes(x: 1.0, y: 2.0, z: 3.0, w: 4.0) }
   end
 
   describe '.point' do
@@ -19,9 +15,13 @@ RSpec.describe Noray::Tetrad do
   end
 
   describe '.vector' do
+    subject(:vector) { described_class.vector(1.0, 2.0, 3.0) }
+
     it 'initializes as a vector' do
-      vector = described_class.vector(1.0, 2.0, 3.0)
       expect(vector).to eq(described_class.new(1.0, 2.0, 3.0, 0.0))
     end
+
+    it { is_expected.to be_a_vector }
+    it { is_expected.to_not be_a_point }
   end
 end

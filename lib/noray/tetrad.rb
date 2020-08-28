@@ -24,5 +24,13 @@ module Noray
     def ==(other)
       x == other.x && y == other.y && z == other.z && w == other.w
     end
+
+    def point?
+      w == 1.0 # rubocop:disable Lint/FloatComparison
+    end
+
+    def vector?
+      w == 0.0 # rubocop:disable Lint/FloatComparison
+    end
   end
 end

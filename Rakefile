@@ -9,7 +9,7 @@ task default: :spec
 task all_tests: %i[rubocop steep spec]
 
 task :rubocop do
-  sh 'rubocop'
+  sh 'rubocop --require rubocop-rspec'
 end
 
 task :steep do
