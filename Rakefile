@@ -6,7 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
 
-task all_tests: %i[rubocop steep spec]
+task all_tests: %i[rubocop spec steep]
 
 task :rubocop do
   sh 'rubocop --require rubocop-rspec'
