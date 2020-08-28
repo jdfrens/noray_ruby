@@ -24,4 +24,12 @@ RSpec.describe Noray::Tetrad do
     it { is_expected.to be_a_vector }
     it { is_expected.to_not be_a_point }
   end
+
+  describe '+' do
+    it 'adds two tetrads' do
+      tetrad1 = described_class.new(3.0, -2.0, 5.0, 1.0)
+      tetrad2 = described_class.new(-2.0, 4.0, 1.0, 0.0)
+      expect(tetrad1 + tetrad2).to eq(described_class.new(1.0, 2.0, 6.0, 1.0))
+    end
+  end
 end

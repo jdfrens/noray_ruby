@@ -32,5 +32,9 @@ module Noray
     def vector?
       w == 0.0 # rubocop:disable Lint/FloatComparison
     end
+
+    def +(other)
+      Tetrad.new(x + other.x, y + other.y, z + other.z, w + other.w)
+    end
   end
 end
