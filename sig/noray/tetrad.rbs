@@ -17,5 +17,6 @@ module Noray
 
     def +: (Tetrad) -> Tetrad
     def -: (Tetrad) -> Tetrad
+    def -@: -> Tetrad
   end
 end

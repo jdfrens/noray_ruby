@@ -40,5 +40,9 @@ module Noray
     def -(other)
       Tetrad.new(x - other.x, y - other.y, z - other.z, w - other.w)
     end
+
+    def -@
+      Tetrad.new(-x, -y, -z, -w)
+    end
   end
 end

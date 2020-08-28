@@ -40,4 +40,11 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
       expect(tetrad1 - tetrad2).to eq(described_class.new(5.0, -6.0, 4.0, 1.0))
     end
   end
+
+  describe '-@' do
+    it 'negates a tetrad' do
+      tetrad = described_class.new(3.0, -2.0, 5.0, 1.0)
+      expect(-tetrad).to eq(described_class.new(-3.0, 2.0, -5.0, -1.0))
+    end
+  end
 end
