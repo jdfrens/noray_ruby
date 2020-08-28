@@ -1,3 +1,5 @@
+require: rubocop-rspec
+
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
@@ -50,6 +52,9 @@ Lint/TopLevelReturnWithArgument:
 
 Lint/UnreachableLoop:
   Enabled: true
+
+RSpec/NotToNot:
+  Enabled: false
 
 Style/AccessorGrouping:
   Enabled: true

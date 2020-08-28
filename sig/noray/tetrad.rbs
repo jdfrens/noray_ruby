@@ -1,0 +1,29 @@
+module Noray
+  class Tetrad
+    @x: Float
+    @y: Float
+    @z: Float
+    @w: Float
+
+    def self.point: (Float, Float, Float) -> Tetrad
+
+    def self.vector: (Float, Float, Float) -> Tetrad
+
+    def initialize: (Float, Float, Float, Float) -> untyped
+    def x: -> Float
+    def y: -> Float
+    def z: -> Float
+    def w: -> Float
+
+    def +: (Tetrad) -> Tetrad
+    def -: (Tetrad) -> Tetrad
+    def -@: -> Tetrad
+    def scale: (Float) -> Tetrad
+    def scale_inverse: (Float) -> Tetrad
+
+    def magnitude: -> Float
+    def normalize: -> Tetrad
+    def dot: (Tetrad) -> Float
+    def cross: (Tetrad) -> Tetrad
+  end
+end
