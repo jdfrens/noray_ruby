@@ -97,4 +97,17 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
       expect(vector.normalize).to eq(expected_vector)
     end
   end
+
+  describe 'dot' do
+    let(:vector1) { described_class.vector(1.0, 2.0, 3.0) }
+    let(:vector2) { described_class.vector(2.0, 3.0, 4.0) }
+
+    it 'computes the dot product of two vectors' do
+      expect(vector1.dot(vector2)).to eq(20)
+    end
+
+    it 'computes the same dot product in either order' do
+      expect(vector2.dot(vector1)).to eq(vector1.dot(vector2))
+    end
+  end
 end
