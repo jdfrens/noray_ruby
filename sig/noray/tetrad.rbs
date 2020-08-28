@@ -24,5 +24,6 @@ module Noray
     def magnitude: -> Float
     def normalize: -> Tetrad
     def dot: (Tetrad) -> Float
+    def cross: (Tetrad) -> Tetrad
   end
 end
