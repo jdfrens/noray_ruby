@@ -49,9 +49,16 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
   end
 
   describe 'scale' do
-    it 'scales by a factor' do
+    it 'multiplies by a factor' do
       tetrad = described_class.new(3.0, -2.0, 5.0, 1.0)
       expect(tetrad.scale(2.0)).to eq(described_class.new(6.0, -4.0, 10.0, 2.0))
+    end
+  end
+
+  describe 'scale_inverse' do
+    it 'divides by a factor' do
+      tetrad = described_class.new(3.0, -2.0, 5.0, 1.0)
+      expect(tetrad.scale_inverse(2.0)).to eq(described_class.new(1.5, -1.0, 2.5, 0.5))
     end
   end
 end

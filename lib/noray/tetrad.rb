@@ -48,5 +48,9 @@ module Noray
     def scale(factor)
       Tetrad.new(x * factor, y * factor, z * factor, w * factor)
     end
+
+    def scale_inverse(factor)
+      Tetrad.new(x / factor, y / factor, z / factor, w / factor)
+    end
   end
 end
