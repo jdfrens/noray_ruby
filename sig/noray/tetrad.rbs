@@ -20,5 +20,7 @@ module Noray
     def -@: -> Tetrad
     def scale: (Float) -> Tetrad
     def scale_inverse: (Float) -> Tetrad
+
+    def magnitude: -> Float
   end
 end

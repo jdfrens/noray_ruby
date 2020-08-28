@@ -52,5 +52,9 @@ module Noray
     def scale_inverse(factor)
       Tetrad.new(x / factor, y / factor, z / factor, w / factor)
     end
+
+    def magnitude
+      Math.sqrt(x * x + y * y + z * z + w * w) # rubocop:disable Lint/BinaryOperatorWithIdenticalOperands
+    end
   end
 end

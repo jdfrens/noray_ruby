@@ -61,4 +61,26 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
       expect(tetrad.scale_inverse(2.0)).to eq(described_class.new(1.5, -1.0, 2.5, 0.5))
     end
   end
+
+  describe 'magnitude' do
+    it 'computes length of unit x vector' do
+      vector = described_class.vector(1.0, 0.0, 0.0)
+      expect(vector.magnitude).to eq(1.0)
+    end
+
+    it 'computes length of unit y vector' do
+      vector = described_class.vector(0.0, 1.0, 0.0)
+      expect(vector.magnitude).to eq(1.0)
+    end
+
+    it 'computes length of unit z vector' do
+      vector = described_class.vector(0.0, 0.0, 1.0)
+      expect(vector.magnitude).to eq(1.0)
+    end
+
+    it 'computes length of interesting vector' do
+      vector = described_class.vector(1.0, -2.0, 3.0)
+      expect(vector.magnitude).to eq(Math.sqrt(14.0))
+    end
+  end
 end
