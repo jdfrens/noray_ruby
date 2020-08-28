@@ -16,5 +16,6 @@ module Noray
     def w: -> Float
 
     def +: (Tetrad) -> Tetrad
+    def -: (Tetrad) -> Tetrad
   end
 end

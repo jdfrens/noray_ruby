@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Noray::Tetrad do
+RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
   describe '#initialize' do
     subject { described_class.new(1.0, 2.0, 3.0, 4.0) }
 
@@ -30,6 +30,14 @@ RSpec.describe Noray::Tetrad do
       tetrad1 = described_class.new(3.0, -2.0, 5.0, 1.0)
       tetrad2 = described_class.new(-2.0, 4.0, 1.0, 0.0)
       expect(tetrad1 + tetrad2).to eq(described_class.new(1.0, 2.0, 6.0, 1.0))
+    end
+  end
+
+  describe '-' do
+    it 'subtracts one tetrad from another' do
+      tetrad1 = described_class.new(3.0, -2.0, 5.0, 1.0)
+      tetrad2 = described_class.new(-2.0, 4.0, 1.0, 0.0)
+      expect(tetrad1 - tetrad2).to eq(described_class.new(5.0, -6.0, 4.0, 1.0))
     end
   end
 end
