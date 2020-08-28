@@ -18,5 +18,6 @@ module Noray
     def +: (Tetrad) -> Tetrad
     def -: (Tetrad) -> Tetrad
     def -@: -> Tetrad
+    def scale: (Float) -> Tetrad
   end
 end

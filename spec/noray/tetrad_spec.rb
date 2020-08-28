@@ -47,4 +47,11 @@ RSpec.describe Noray::Tetrad do # rubocop:disable Metrics/BlockLength
       expect(-tetrad).to eq(described_class.new(-3.0, 2.0, -5.0, -1.0))
     end
   end
+
+  describe 'scale' do
+    it 'scales by a factor' do
+      tetrad = described_class.new(3.0, -2.0, 5.0, 1.0)
+      expect(tetrad.scale(2.0)).to eq(described_class.new(6.0, -4.0, 10.0, 2.0))
+    end
+  end
 end

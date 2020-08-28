@@ -44,5 +44,9 @@ module Noray
     def -@
       Tetrad.new(-x, -y, -z, -w)
     end
+
+    def scale(factor)
+      Tetrad.new(x * factor, y * factor, z * factor, w * factor)
+    end
   end
 end
