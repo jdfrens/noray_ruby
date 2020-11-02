@@ -1,0 +1,17 @@
+module Noray
+  class Color
+    @r: Float
+    @g: Float
+    @b: Float
+
+    def initialize: (Float, Float, Float) -> untyped
+    def r: -> Float
+    def g: -> Float
+    def b: -> Float
+
+    def +: (Color) -> Color
+    def -: (Color) -> Color
+    def scale: (Float) -> Color
+    def *: (Color) -> Color
+  end
+end
